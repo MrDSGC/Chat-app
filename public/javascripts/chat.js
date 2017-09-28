@@ -13,7 +13,16 @@ class Chat {
     let msg = false
 
     switch (parsedCmd) {
-
+      case 'join':
+        words.shift()
+        const room = words.join(' ')
+        this.changeRoom(room)
+        break
+      case 'nick':
+        words.shift()
+        const name = words.join(' ')
+        this.socket.emit('nameAttempt', name)
+        break
       default:
         msg = 'Unrecognized command.'
         break
