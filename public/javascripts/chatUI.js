@@ -37,6 +37,7 @@ class ChatUI {
       this.input.value = ''
     })
   }
+
      
   processUserInput(){
     const msg = this.getInput()
