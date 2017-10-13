@@ -30,6 +30,6 @@ class Chat {
     return msg
   }
 
-}
+}   
 
 module.exports = Chat
